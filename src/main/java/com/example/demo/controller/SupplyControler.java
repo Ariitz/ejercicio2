@@ -18,8 +18,6 @@ public class SupplyControler{
 
     @PostMapping("/getAvailability")
     public SupplyEntity getAvailability(@RequestBody RequestEntity prodId) throws NoDemandException {
-        System.out.println("prodId");
-        System.out.println(prodId);
         return supplyService.getAvailability(prodId.getProductId());
     }
 }
